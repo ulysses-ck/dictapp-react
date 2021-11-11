@@ -1,7 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container, styled, Switch } from "@material-ui/core";
+import { Container, styled as styledMu, Switch } from "@material-ui/core";
 import Header from "./components/Header/Header";
 import Definitions from "./components/Definitions/Definitions";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -13,7 +13,7 @@ function App() {
     const [category, setCategory] = useState("en");
     const [LightMode, setLightMode] = useState(true);
 
-    const DarkMode = styled(Switch)(({ theme }) => ({
+    const DarkMode = styledMu(Switch)(({ theme }) => ({
         width: 62,
         height: 34,
         padding: 7,
@@ -69,12 +69,11 @@ function App() {
                 `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
             );
             setMeanings(data.data);
+            console.log(data);
         } catch (error) {
             console.log(error);
         }
     };
-
-    console.log(meanings);
 
     useEffect(() => {
         dictionaryApi();
@@ -85,9 +84,8 @@ function App() {
             className="App"
             style={{
                 height: "100vh",
-                backgroundColor: LightMode ? "#282c34" : "#fff",
+                backgroundColor: LightMode ? "rgb(40, 44, 52)" : "#fff",
                 color: LightMode ? "#fff" : "#000",
-                transition: "all 0.8s ease-in-out",
             }}
         >
             <Container

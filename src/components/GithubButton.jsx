@@ -10,6 +10,7 @@ const GithubButton = ({ LightMode }) => {
                 paddingTop: 10,
             }}
             href="https://github.com"
+            target="blank"
         >
             <svg
                 fill={LightMode ? "#ffffff" : "#000000"}

@@ -1,0 +1,150 @@
+[
+    {
+        "word": "man",
+        "phonetic": "man",
+        "phonetics": [
+            {
+                "text": "man",
+                "audio": "//ssl.gstatic.com/dictionary/static/sounds/20200429/_man--1_gb_1.mp3"
+            }
+        ],
+        "origin": "Old English man(n), (plural) menn (noun), mannian (verb), of Germanic origin; related to Dutch man, German Mann, and Sanskrit manu ‘mankind’.",
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "an adult male human being.",
+                        "example": "a tall man with a beard",
+                        "synonyms": [
+                            "male",
+                            "adult male",
+                            "gentleman",
+                            "guy",
+                            "fellow",
+                            "gent",
+                            "mother's son",
+                            "bloke",
+                            "chap",
+                            "geezer",
+                            "lad",
+                            "Joe",
+                            "dude",
+                            "bro",
+                            "hombre",
+                            "digger",
+                            "oke",
+                            "ou",
+                            "oom",
+                            "admi",
+                            "bodach",
+                            "cove",
+                            "carl"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "a human being of either sex; a person.",
+                        "example": "goodwill to all men",
+                        "synonyms": [
+                            "human being",
+                            "human",
+                            "person",
+                            "mortal",
+                            "individual",
+                            "personage",
+                            "soul"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "a group or person in a position of authority over others, such as a corporate employer or the police.",
+                        "example": "they've mastered their emotive grunge-pop without haggling with the Man",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "a figure or token used in playing a board game.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ]
+            },
+            {
+                "partOfSpeech": "verb",
+                "definitions": [
+                    {
+                        "definition": "(of personnel) work at, run, or operate (a place or piece of equipment) or defend (a fortification).",
+                        "example": "the helpline is manned by trained staff",
+                        "synonyms": [
+                            "staff",
+                            "crew",
+                            "occupy",
+                            "people",
+                            "operate",
+                            "work",
+                            "use",
+                            "utilize"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "fortify the spirits or courage of.",
+                        "example": "he manned himself with dauntless air",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ]
+            },
+            {
+                "partOfSpeech": "exclamation",
+                "definitions": [
+                    {
+                        "definition": "used, irrespective of the sex of the person addressed, to express surprise, admiration, delight, etc., or for emphasis.",
+                        "example": "wow, like cosmic, man",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "-man",
+        "phonetic": "man",
+        "phonetics": [
+            {
+                "text": "man"
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "combining form",
+                "definitions": [
+                    {
+                        "definition": "in nouns denoting a male of a specified nationality or origin.",
+                        "example": "Frenchman",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "Man.",
+        "phonetics": [{}],
+        "meanings": [
+            {
+                "partOfSpeech": "abbreviation",
+                "definitions": [
+                    {
+                        "definition": "Manitoba.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ]
+            }
+        ]
+    }
+]

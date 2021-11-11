@@ -1,5 +1,6 @@
 import React from "react";
 import "./Definitions.css";
+import { DefinitionDiv, HrStyled } from "./DefinitionStyles";
 
 const Definitions = ({ word, category, meanings, LightMode }) => {
     return (
@@ -10,7 +11,6 @@ const Definitions = ({ word, category, meanings, LightMode }) => {
                         meanings[0].phonetics[0] &&
                         meanings[0].phonetics[0].audio
                     }
-                    style={{ backgroundColor: "#fff", borderRadius: "10px" }}
                     controls
                 ></audio>
             )}
@@ -20,37 +20,31 @@ const Definitions = ({ word, category, meanings, LightMode }) => {
                     Start by typing a word in search
                 </span>
             ) : (
-                meanings.map((mean) =>
-                    mean.meanings.map((item) =>
-                        item.definitions.map((def) => (
-                            <div
-                                className="singleMean"
-                                style={{
-                                    backgroundColor: LightMode
-                                        ? "#fff"
-                                        : "#3b5360",
-                                    color: LightMode ? "#000" : "#fff",
-                                }}
+                meanings.map((item) =>
+                    item.meanings.map((mean) =>
+                        mean.definitions.map((def, index) => (
+                            <DefinitionDiv
+                                className="singleMean waves-effect waves-light btn-large"
+                                LightMode={LightMode}
                             >
-                                <b> {def.definition} </b>
-                                <hr
-                                    style={{
-                                        backgroundColor: "black",
-                                        width: "100%",
-                                    }}
-                                />
+                                <b>
+                                    {`${index + 1}. `}
+                                    {def.definition[0].toUpperCase() +
+                                        def.definition.slice(1)}
+                                </b>
+                                <HrStyled as="hr" />
                                 {def.example && (
                                     <span>
-                                        <b>Example: </b> {def.example}
+                                        {def.example[0].toUpperCase() +
+                                            def.example.slice(1) +
+                                            "."}
                                     </span>
                                 )}
+                                <br />
                                 {def.synonyms && (
-                                    <span>
-                                        <b>Synonyms : </b>
-                                        {def.synonyms.map((s) => `${s}, `)}
-                                    </span>
+                                    <i>{def.synonyms.map((s) => `${s}, `)}</i>
                                 )}
-                            </div>
+                            </DefinitionDiv>
                         ))
                     )
                 )
