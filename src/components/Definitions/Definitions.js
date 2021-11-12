@@ -74,13 +74,28 @@ const Definitions = ({ word, category, meanings, LightMode }) => {
                                                         </span>
                                                     )}
                                                 </p>
-                                                {def.synonyms.length > 0 && (
-                                                    <i>
-                                                        {def.synonyms.map(
-                                                            (s) => `${s}, `
-                                                        )}
-                                                    </i>
-                                                )}
+                                                <p>
+                                                    {def.synonyms.length >
+                                                        0 && (
+                                                        <i>
+                                                            Synonyms:{" "}
+                                                            {def.synonyms.map(
+                                                                (s) => `${s}, `
+                                                            )}
+                                                        </i>
+                                                    )}
+                                                </p>
+                                                <p>
+                                                    {def.antonyms.length >
+                                                        0 && (
+                                                        <i>
+                                                            Antonyms:{" "}
+                                                            {def.antonyms.map(
+                                                                (s) => `${s}, `
+                                                            )}
+                                                        </i>
+                                                    )}
+                                                </p>
                                             </li>
                                             <br />
                                         </ul>

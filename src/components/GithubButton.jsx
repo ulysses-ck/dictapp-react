@@ -9,7 +9,7 @@ const GithubButton = ({ LightMode }) => {
                 left: 15,
                 paddingTop: 10,
             }}
-            href="https://github.com"
+            href="https://github.com/ulysses-ck/dictapp-react"
             target="blank"
         >
             <svg
