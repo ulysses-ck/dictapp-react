@@ -8,9 +8,6 @@ import GithubButton from "./components/GithubButton";
 import ConnectionToast from "react-offline-notify";
 import ReactGA from "react-ga";
 
-const TRACKING_ID = "G-K7ES6C7MB0"; // YOUR_OWN_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
-
 function App() {
     const [word, setWord] = useState("");
     const [meanings, setMeanings] = useState([]);
