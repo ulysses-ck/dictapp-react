@@ -87,11 +87,20 @@ function App() {
                 color: LightMode ? "#fff" : "#000",
             }}
         >
-            <ConnectionToast
-                timeout="10000ms"
-                onlineText="Yey! There's connection 😉"
-                offlineText="Seems there is no connection 😫"
-            />
+            <GithubButton LightMode={LightMode} />
+            <div
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    right: 15,
+                    paddingTop: 10,
+                }}
+            >
+                <DarkMode
+                    checked={LightMode}
+                    onChange={() => setLightMode(!LightMode)}
+                />
+            </div>
             <Container
                 maxWidth="md"
                 style={{
@@ -101,21 +110,12 @@ function App() {
                     justifyContent: "space-evenly",
                 }}
             >
-                <GithubButton LightMode={LightMode} />
-                <div
-                    style={{
-                        position: "absolute",
-                        top: 0,
-                        right: 15,
-                        paddingTop: 10,
-                    }}
-                >
-                    <span>{LightMode ? "Dark" : "Light"} Mode</span>
-                    <DarkMode
-                        checked={LightMode}
-                        onChange={() => setLightMode(!LightMode)}
-                    />
-                </div>
+                <ConnectionToast
+                    timeout="10000"
+                    onlineText="Yey! There's connection 😉"
+                    offlineText="Seems there is no connection 😫"
+                />
+
                 <Header
                     category={category}
                     setCategory={setCategory}
