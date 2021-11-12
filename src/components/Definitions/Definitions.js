@@ -1,6 +1,11 @@
 import React from "react";
 import "./Definitions.css";
-import { DefinitionDiv, HrStyled } from "./DefinitionStyles";
+import {
+    DefinitionDiv,
+    HrStyled,
+    ErrorDefinitionDiv,
+} from "./DefinitionStyles";
+import categories from "../../data/category";
 
 const Definitions = ({ word, category, meanings, LightMode }) => {
     return (
@@ -19,35 +24,53 @@ const Definitions = ({ word, category, meanings, LightMode }) => {
                 <span className="subTitle">
                     Start by typing a word in search
                 </span>
+            ) : meanings.length === 0 ? (
+                <ErrorDefinitionDiv LightMode={LightMode}>
+                    Seems the word <b>"{word}"</b> does not exists in{" "}
+                    <b>{`${
+                        categories.filter((i) => i.label === category)[0].value
+                    }[${category}]`}</b>
+                </ErrorDefinitionDiv>
             ) : (
-                meanings.map((item) =>
-                    item.meanings.map((mean) =>
-                        mean.definitions.map((def, index) => (
-                            <DefinitionDiv
-                                className="singleMean waves-effect waves-light btn-large"
-                                LightMode={LightMode}
-                            >
-                                <b>
-                                    {`${index + 1}. `}
-                                    {def.definition[0].toUpperCase() +
-                                        def.definition.slice(1)}
-                                </b>
-                                <HrStyled as="hr" />
-                                {def.example && (
-                                    <span>
-                                        {def.example[0].toUpperCase() +
-                                            def.example.slice(1) +
-                                            "."}
-                                    </span>
-                                )}
-                                <br />
-                                {def.synonyms && (
-                                    <i>{def.synonyms.map((s) => `${s}, `)}</i>
-                                )}
-                            </DefinitionDiv>
-                        ))
-                    )
-                )
+                meanings.map((item) => (
+                    <DefinitionDiv className="singleMean" LightMode={LightMode}>
+                        <h3>{item.word.toUpperCase()}</h3>
+                        <p>{`/${item.phonetic}/`}</p>
+                        {item.origin}
+
+                        {item.meanings.map((mean) =>
+                            mean.definitions.map((def, index) => (
+                                <div>
+                                    <ul
+                                    >
+                                        <li>
+                                            <b>
+                                                {def.definition[0].toUpperCase() +
+                                                    def.definition.slice(1)}
+                                            </b>
+                                        </li>
+                                        <HrStyled as="hr" />
+                                        {def.example && (
+                                            <span>
+                                                {def.example[0].toUpperCase() +
+                                                    def.example.slice(1) +
+                                                    "."}
+                                            </span>
+                                        )}
+                                        <br />
+                                        {def.synonyms.length > 0 && (
+                                            <i>
+                                                {def.synonyms.map(
+                                                    (s) => `${s}, `
+                                                )}
+                                            </i>
+                                        )}
+                                    </ul>
+                                </div>
+                            ))
+                        )}
+                    </DefinitionDiv>
+                ))
             )}
         </div>
     );

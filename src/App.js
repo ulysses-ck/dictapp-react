@@ -1,4 +1,3 @@
-import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Container, styled as styledMu, Switch } from "@material-ui/core";
@@ -6,6 +5,7 @@ import Header from "./components/Header/Header";
 import Definitions from "./components/Definitions/Definitions";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import GithubButton from "./components/GithubButton";
+import ConnectionToast from "react-offline-notify";
 
 function App() {
     const [word, setWord] = useState("");
@@ -69,9 +69,8 @@ function App() {
                 `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
             );
             setMeanings(data.data);
-            console.log(data);
         } catch (error) {
-            console.log(error);
+            setMeanings([]);
         }
     };
 
@@ -84,10 +83,15 @@ function App() {
             className="App"
             style={{
                 height: "100vh",
-                backgroundColor: LightMode ? "rgb(40, 44, 52)" : "#fff",
+                backgroundColor: LightMode ? "rgb(40, 44, 52)" : "#efefef",
                 color: LightMode ? "#fff" : "#000",
             }}
         >
+            <ConnectionToast
+                timeout="10000ms"
+                onlineText="Yey! There's connection 😉"
+                offlineText="Seems there is no connection 😫"
+            />
             <Container
                 maxWidth="md"
                 style={{
