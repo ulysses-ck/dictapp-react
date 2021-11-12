@@ -6,7 +6,6 @@ import Definitions from "./components/Definitions/Definitions";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import GithubButton from "./components/GithubButton";
 import ConnectionToast from "react-offline-notify";
-import ReactGA from "react-ga";
 
 function App() {
     const [word, setWord] = useState("");
