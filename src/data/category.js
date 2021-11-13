@@ -36,10 +36,6 @@ const categories = [
         label: "ko",
     },
     {
-        value: "Brazilian Portuguese",
-        label: "pt-BR",
-    },
-    {
         value: "Arabic",
         label: "ar",
     },
