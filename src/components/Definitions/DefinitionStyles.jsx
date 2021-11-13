@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DefinitionDiv = styled.div`
     background-color: ${(props) =>
-        props.LightMode ? "rgb(28, 32, 36)" : "#f5f5f5ed"};
+        props.LightMode ? "rgb(34, 36, 44)" : "#f5f5f5ed"};
     color: ${(props) => (props.LightMode ? "#FFF" : "#000")};
     box-shadow: ${(props) =>
                 props.LightMode
