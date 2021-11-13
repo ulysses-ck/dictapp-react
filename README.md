@@ -2,11 +2,11 @@
 
 A [dictionary Progresive Web App](https://dictapp.netlify.app/)
 
-## Demo
+## 🎞 Demo
 
 ![Demo GIF](./showcase.gif)
 
-## Dark and Light Mode Support
+## 🌚🌞 Dark and Light Mode Support
 
 ![Dark and Light Mode GIF](./darklightmode.gif)
 
