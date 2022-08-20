@@ -76,7 +76,7 @@ function App() {
 
     useEffect(() => {
         dictionaryApi();
-    }, [word, category]);
+    }, []);
 
     return (
         <div
