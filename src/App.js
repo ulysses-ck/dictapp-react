@@ -63,7 +63,9 @@ function App() {
         },
     }));
 
-    const dictionaryApi = async () => {
+    
+    useEffect(() => {
+        const dictionaryApi = async () => {
         try {
             const data = await axios.get(
                 `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
@@ -74,7 +76,6 @@ function App() {
         }
     };
 
-    useEffect(() => {
         dictionaryApi();
     }, [word]);
 
