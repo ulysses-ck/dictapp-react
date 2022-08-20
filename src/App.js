@@ -76,7 +76,7 @@ function App() {
 
     useEffect(() => {
         dictionaryApi();
-    }, []);
+    });
 
     return (
         <div
