@@ -77,7 +77,7 @@ function App() {
     };
 
         dictionaryApi();
-    }, [word]);
+    }, []);
 
     return (
         <div
