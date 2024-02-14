@@ -12,10 +12,10 @@ A [dictionary Progresive Web App](https://dictapp.netlify.app/)
 
 ## 🔨 Build with:
 
--   React
--   Axios
--   Material UI
--   Styled-Components
+-   [React](https://react.dev/)
+-   [Axios](https://axios-http.com/)
+-   [Material UI](https://mui.com/)
+-   [Styled-Components](https://styled-components.com/)
 -   [Free Dictionary API](https://dictionaryapi.dev/)
 
 I also made this app with Javascript, HTML and CSS [here](https://safjkib2pr.netlify.app/).
